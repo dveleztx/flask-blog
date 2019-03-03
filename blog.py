@@ -1,12 +1,14 @@
 # Imports
 from flask import Flask, render_template, url_for, flash, redirect
+from flask_sqlalchemy import SQLAlchemy
 from forms import RegistrationForm, LoginForm
 
 # Create Flask App
 app = Flask(__name__)
 
-#
+# App Configurations
 app.config["SECRET_KEY"] = "ded04618e70e37ff38d20ac218b67ac9"
+app.config['SQLALCHEMY_DATABASE_URI'] = ""
 
 
 # Blog Posts
